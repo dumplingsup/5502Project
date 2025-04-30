@@ -1,0 +1,163 @@
+{
+  "training_log": {
+    "start_time": "2025-04-30 11:14:36",
+    "end_time": "2025-04-30 11:16:39",
+    "epochs": 5,
+    "initialization": {
+      "data_source": "dataset.json",
+      "model": "bert-base-uncased",
+      "device": "cuda",
+      "warnings": [
+        "Some weights of BertForSequenceClassification were not initialized from the model checkpoint",
+        "FutureWarning about AdamW implementation",
+        "Torch was not compiled with flash attention"
+      ]
+    },
+    "epoch_results": [
+      {
+        "epoch": 1,
+        "train_loss": 2.4716,
+        "validation_accuracy": 0.12,
+        "macro_avg_f1": 0.07,
+        "weighted_avg_f1": 0.11
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.9266,
+        "validation_accuracy": 0.30,
+        "macro_avg_f1": 0.18,
+        "weighted_avg_f1": 0.33
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.2732,
+        "validation_accuracy": 0.56,
+        "macro_avg_f1": 0.26,
+        "weighted_avg_f1": 0.58
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.7258,
+        "validation_accuracy": 0.62,
+        "macro_avg_f1": 0.30,
+        "weighted_avg_f1": 0.62
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.4418,
+        "validation_accuracy": 0.73,
+        "macro_avg_f1": 0.42,
+        "weighted_avg_f1": 0.68
+      }
+    ],
+    "final_test_results": {
+      "accuracy": 0.73,
+      "macro_avg_f1": 0.42,
+      "weighted_avg_f1": 0.68,
+      "class_metrics": {
+        "BREAK": {
+          "precision": 0.91,
+          "recall": 0.89,
+          "f1": 0.90,
+          "support": 35
+        },
+        "CHANCE/OPPORTUNITY": {
+          "precision": 0.00,
+          "recall": 0.00,
+          "f1": 0.00,
+          "support": 1
+        },
+        "COMPUTER": {
+          "precision": 1.00,
+          "recall": 1.00,
+          "f1": 1.00,
+          "support": 1
+        },
+        "DRUG": {
+          "precision": 0.64,
+          "recall": 1.00,
+          "f1": 0.78,
+          "support": 9
+        },
+        "GOOD/EXCELLENT": {
+          "precision": 0.00,
+          "recall": 0.00,
+          "f1": 0.00,
+          "support": 1
+        },
+        "JOKE/REMARK": {
+          "precision": 0.00,
+          "recall": 0.00,
+          "f1": 0.00,
+          "support": 3
+        },
+        "LOSE CONTROL OF EMOTIONS OR ACTIONS": {
+          "precision": 0.00,
+          "recall": 0.00,
+          "f1": 0.00,
+          "support": 2
+        },
+        "SOLVE": {
+          "precision": 0.83,
+          "recall": 0.71,
+          "f1": 0.77,
+          "support": 7
+        },
+        "THIN SPACE": {
+          "precision": 0.00,
+          "recall": 0.00,
+          "f1": 0.00,
+          "support": 6
+        },
+        "WEAKNESS": {
+          "precision": 0.57,
+          "recall": 0.94,
+          "f1": 0.71,
+          "support": 17
+        },
+        "crack a joke": {
+          "precision": 0.50,
+          "recall": 0.25,
+          "f1": 0.33,
+          "support": 4
+        },
+        "crack down (on sth.)": {
+          "precision": 1.00,
+          "recall": 1.00,
+          "f1": 1.00,
+          "support": 6
+        },
+        "crack open a bottle": {
+          "precision": 0.00,
+          "recall": 0.00,
+          "f1": 0.00,
+          "support": 2
+        }
+      }
+    },
+    "predictions": [
+      {
+        "input": "The phone screen cracked after falling on the floor.",
+        "predicted_sense": "BREAK",
+        "confidence": 0.54
+      },
+      {
+        "input": "The ice on the lake is starting to crack.",
+        "predicted_sense": "BREAK",
+        "confidence": 0.55
+      },
+      {
+        "input": "He finally cracked under the pressure of exams.",
+        "predicted_sense": "BREAK",
+        "confidence": 0.38
+      }
+    ]
+  },
+  "metadata": {
+    "results_saved_to": "bert_results.json",
+    "warnings": [
+      "Multiple UndefinedMetricWarnings about precision/recall being ill-defined",
+      "Some classes had no predicted samples or true samples"
+    ]
+  }
+}

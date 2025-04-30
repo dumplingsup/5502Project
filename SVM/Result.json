@@ -1,0 +1,141 @@
+{
+    "experiment_results": {
+        "model_parameters": {
+            "best_params": {
+                "svm__C": 1,
+                "tfidf__max_df": 0.75,
+                "tfidf__min_df": 3
+            }
+        },
+        "classification_report": {
+            "classes": {
+                "BREAK": {
+                    "precision": 0.63,
+                    "recall": 0.89,
+                    "f1-score": 0.74,
+                    "support": 35
+                },
+                "CHANCE/OPPORTUNITY": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 1
+                },
+                "COMPUTER": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 1
+                },
+                "DRUG": {
+                    "precision": 0.56,
+                    "recall": 1.0,
+                    "f1-score": 0.72,
+                    "support": 9
+                },
+                "GOOD/EXCELLENT": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 1
+                },
+                "JOKE/REMARK": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 3
+                },
+                "LOSE CONTROL OF EMOTIONS OR ACTIONS": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 2
+                },
+                "SOLVE": {
+                    "precision": 0.5,
+                    "recall": 0.29,
+                    "f1-score": 0.36,
+                    "support": 7
+                },
+                "THIN SPACE": {
+                    "precision": 0.29,
+                    "recall": 0.33,
+                    "f1-score": 0.31,
+                    "support": 6
+                },
+                "WEAKNESS": {
+                    "precision": 0.83,
+                    "recall": 0.59,
+                    "f1-score": 0.69,
+                    "support": 17
+                },
+                "crack a joke": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 4
+                },
+                "crack down (on sth.)": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1-score": 1.0,
+                    "support": 6
+                },
+                "crack open a bottle": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1-score": 0.0,
+                    "support": 2
+                }
+            },
+            "overall": {
+                "accuracy": 0.64,
+                "macro_avg": {
+                    "precision": 0.29,
+                    "recall": 0.31,
+                    "f1-score": 0.29
+                },
+                "weighted_avg": {
+                    "precision": 0.56,
+                    "recall": 0.64,
+                    "f1-score": 0.58
+                }
+            }
+        },
+        "cross_validation": {
+            "scores": [0.53191489, 0.60638298, 0.68085106, 0.67741935, 0.61290323],
+            "mean_accuracy": 0.62,
+            "std_range": 0.11
+        },
+        "predictions": [
+            {
+                "text": "The glass cracked when I dropped it.",
+                "predicted_sense": "BREAK",
+                "confidence": 0.72
+            },
+            {
+                "text": "He cracked the code after hours of work.",
+                "predicted_sense": "SOLVE",
+                "confidence": 0.90
+            },
+            {
+                "text": "Her voice cracked with emotion.",
+                "predicted_sense": "BREAK",
+                "confidence": 0.28
+            }
+        ],
+        "warnings": [
+            "CHANCE/OPPORTUNITY had no predicted samples",
+            "COMPUTER had no predicted samples",
+            "GOOD/EXCELLENT had no predicted samples",
+            "JOKE/REMARK had no predicted samples",
+            "LOSE CONTROL OF EMOTIONS OR ACTIONS had no predicted samples",
+            "crack a joke - To make a humorous remark. // 搭配：讲笑话、开玩笑 had no predicted samples",
+            "crack open a bottle - To open a bottle, often alcohol, to celebrate or begin drinking. // 搭配：开瓶庆祝或开始饮酒 had no predicted samples"
+        ],
+        "artifacts": {
+            "feature_importance_plot": "svm_feature_importance.png",
+            "results_file": "results.json"
+        }
+    }
+}
